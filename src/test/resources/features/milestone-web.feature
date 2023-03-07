@@ -19,3 +19,8 @@ Feature: Milestones
     And I create milestone with title "hello"
     And I delete milestone with title "hello"
     Then I should not see milestone with content "hello"
+
+  @regress
+  #@allure.label.jira:AE-2
+  Scenario: YYYYY
+    When I open milestones page
