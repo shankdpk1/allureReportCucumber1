@@ -24,3 +24,7 @@ Feature: Milestones
   #@allure.label.jira:AE-2
   Scenario: YYYYY
     When I open milestones page
+  @regress
+  #@allure.label.jira:AE-2
+  Scenario: YYYYYCCCC
+    When I open milestones page
