@@ -47,8 +47,7 @@ jobs:
           echo ${{github.event.inputs.testcases_tag}}
           echo ${{github.event.inputs.testcases_tag || 'prod4' }}
           mvn test
-          else if
-          echo ${{github.event.inputs.testcases_tag || "" }}
+          else if [ '${{ github.event.inputs.testcases_tag }}' == "" ] ; then
           echo ${{github.event.inputs.testcases_tag}}
           echo blank val
           mvn clean test
