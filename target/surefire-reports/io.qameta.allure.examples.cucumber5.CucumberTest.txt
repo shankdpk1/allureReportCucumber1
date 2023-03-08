@@ -1,8 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: io.qameta.allure.examples.cucumber5.CucumberTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.545 s <<< FAILURE! - in io.qameta.allure.examples.cucumber5.CucumberTest
-Add label to existing issue for authorized user(Labels)  Time elapsed: 0.025 s  <<< ERROR!
+Tests run: 9, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 2.383 s <<< FAILURE! - in io.qameta.allure.examples.cucumber5.CucumberTest
+Create new label for authorized user(Labels)  Time elapsed: 0.038 s  <<< ERROR!
+java.lang.RuntimeException: Element not found for xpath [//div[@class='something']]
+
+Add label to existing issue for authorized user(Labels)  Time elapsed: 0.031 s  <<< ERROR!
 java.lang.RuntimeException: Element not found for xpath [//div[@class='something']]
 
 Delete existing label for authorized user(Labels)  Time elapsed: 0.016 s  <<< ERROR!
