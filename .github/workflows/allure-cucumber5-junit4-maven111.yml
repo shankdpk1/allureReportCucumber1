@@ -5,7 +5,7 @@ on:
 #    branches-ignore:
 #      - '!master'
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
 
   workflow_dispatch:
 
