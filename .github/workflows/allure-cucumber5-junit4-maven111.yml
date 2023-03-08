@@ -7,7 +7,11 @@ on:
   schedule:
     - cron: '* * * * *'
 
-#  workflow_dispatch:
+  workflow_dispatch:
+    inputs:
+      testcases_tag:
+        description: 'test tag'
+        default: 'prod1'
 
 
 jobs:
@@ -15,6 +19,8 @@ jobs:
     name: Run tests and generate Allure Report
     runs-on: ubuntu-latest
     steps:
+      - name: print tagname
+        run: echo ${{github.event.inputs.testcases_tag}}
       - uses: actions/checkout@v2
 
 
@@ -36,8 +42,11 @@ jobs:
 
       - name: Run Test
         if: always()
-        run: mvn test
-        continue-on-error: true
+        run: |
+          mvn -v
+          echo ${{github.event.inputs.testcases_tag}}
+          mvn test
+          continue-on-error: true
 
 
       - name: Get Allure history
