@@ -4,8 +4,8 @@ on:
 #  push:
 #    branches-ignore:
 #      - '!master'
-#  schedule:
-#    - cron: '0 53 21 ? * * *'
+  schedule:
+    - cron: '0 9 22 * * ?'
 
   workflow_dispatch:
 
