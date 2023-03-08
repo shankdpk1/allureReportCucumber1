@@ -54,6 +54,7 @@ jobs:
           fi
 
 
+
       - name: Get Allure history
         uses: actions/checkout@v2
         if: always()
