@@ -1,11 +1,11 @@
-name: allure-cucumber5-junit4-maven
+name: allure-cucumber5-junit4-maven111
 
 on:
 #  push:
 #    branches-ignore:
 #      - '!master'
   schedule:
-    -cron: '55 21 * * *'
+    -cron: '0 53 21 ? * * *'
 
   workflow_dispatch:
 
