@@ -12,6 +12,16 @@ on:
       testcases_tag:
         description: 'test tag'
         default: 'prod1'
+      Env:
+        description: 'this is env'
+        required: true
+        default: 'qas'
+        type: choice
+        options:
+          - AAAA
+          - BBBB
+          - CCCC
+
 
 
 jobs:
@@ -46,11 +56,13 @@ jobs:
           if [ '${{ github.event.inputs.testcases_tag }}' == 'prod3' ] ; then
            echo ${{github.event.inputs.testcases_tag}}
            echo ${{github.event.inputs.testcases_tag || 'prod4' }}
+           echo -Dspring.ENV=${{ github.event.inputs.Env || '' }}
            echo 1
            mvn test
           elif [ '${{ github.event.inputs.testcases_tag }}' == '' ] ; then
            echo ${{github.event.inputs.testcases_tag}}
            echo ${{github.event.inputs.testcases_tag || 'prod5' }}
+           echo -Dspring.ENV=${{ github.event.inputs.Env || 'qas3' }}
            echo 2
            mvn test
           else
