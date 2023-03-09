@@ -12,6 +12,7 @@ on:
       testcases_tag:
         description: 'test tag'
         default: 'prod1'
+        required: true
       Env:
         description: 'this is env'
         required: true
