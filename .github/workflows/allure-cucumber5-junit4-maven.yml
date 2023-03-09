@@ -36,7 +36,7 @@ jobs:
 
 
   test:
-    name: Run tests and generate Allure Report
+    name: test1111
     steps:
       - name: Run Test
         if: always()
@@ -46,6 +46,7 @@ jobs:
 
   deploy:
     name: Get Allure history
+    steps:
       uses: actions/checkout@v2
       if: always()
       continue-on-error: true
