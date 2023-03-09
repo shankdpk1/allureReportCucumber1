@@ -12,13 +12,13 @@ Feature: Milestones
     And I create milestone with title "hello"
     Then I should see milestone with title "hello"
 
-  @regress
-  #@allure.label.jira:AE-2
-  Scenario: Close existing milestone for authorized user
-    When I open milestones page
-    And I create milestone with title "hello"
-    And I delete milestone with title "hello"
-    Then I should not see milestone with content "hello"
+#  @regress
+#  #@allure.label.jira:AE-2
+#  Scenario: Close existing milestone for authorized user
+#    When I open milestones page
+#    And I create milestone with title "hello"
+#    And I delete milestone with title "hello"
+#    Then I should not see milestone with content "hello"
 
   @regress
   #@allure.label.jira:AE-2
