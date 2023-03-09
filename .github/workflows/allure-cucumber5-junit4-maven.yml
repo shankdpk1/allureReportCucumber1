@@ -1,9 +1,9 @@
 name: allure-cucumber5-junit4-maven
 
 on:
-    push:
-      branches-ignore:
-        - '!master'
+  push:
+    branches-ignore:
+      - '!master'
   schedule:
     - cron: '1 23 * * *'
 
@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-#      - uses: actions/checkout@v2
+      #      - uses: actions/checkout@v2
 
       - uses: actions/cache@v1
         with:
