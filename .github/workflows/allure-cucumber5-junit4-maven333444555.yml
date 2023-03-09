@@ -46,10 +46,15 @@ jobs:
           if [ '${{ github.event.inputs.testcases_tag }}' == 'prod3' ] ; then
            echo ${{github.event.inputs.testcases_tag}}
            echo ${{github.event.inputs.testcases_tag || 'prod4' }}
+           echo 1
+           mvn test
+          if [ '${{ github.event.inputs.testcases_tag }}' == '' ] ; then
+           echo ${{github.event.inputs.testcases_tag}}
+           echo ${{github.event.inputs.testcases_tag || 'prod5' }}
            echo 2
            mvn test
           else
-           echo ${{github.event.inputs.testcases_tag || 'prod5' }}
+           echo ${{github.event.inputs.testcases_tag || 'prod6' }}
            echo ${{github.event.inputs.testcases_tag}}
            echo 3
            mvn package
