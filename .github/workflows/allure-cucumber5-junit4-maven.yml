@@ -83,6 +83,15 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
 
+      - name: Deploy report to Github Pages
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifacts
+          path: target/allure-results
+
+
+#2 slacks, multi jobs , artifacts
+
 #      - name: Deploy
 #        if: always()
 #        uses: JamesIves/github-pages-deploy-action@v4
